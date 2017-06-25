@@ -1,0 +1,141 @@
+
++font('gBlack',GothamBlack)
++font('gBook',GothamBook)
++font('gBold',GothamBold)
+
+=black
+	font-family: gBlack,sans-serif 
+=bold
+	font-family: gBold,sans-serif
+=reg
+	font-family: gBook,sans-serif 
+
+body
+	background: #FFF
+	line-height: 1.4
+	+reg
+.container
+	max-width: 1100px 
+	margin: 0 auto
+.header
+	position: absolute
+	top: 0
+	left: 0
+	right: 0   
+	padding-top: 45px 
+	&__left
+		float: left
+	&__right
+		float: right
+		width: 60%
+		text-align: right  
+		position: relative
+		top: 2px 
+.nav
+	font-size: 14px 
+	display: inline-block
+	vertical-align: middle
+	position: relative
+	top: 7px 
+	margin-right: 20px 
+	a
+		text-decoration: none
+		color: #b8bbc4
+		display: inline-block
+		position: relative
+		margin-left: 26px 
+		overflow: hidden
+		padding-bottom: 4px 
+		&:hover,&.is-active
+			color: #fff 
+			&:before
+				transform: translate(0,0)
+		&::before
+			position: absolute
+			left: 0
+			width: 100% 
+			bottom: 0   
+			height: 2px 
+			background: #2addbc
+			content: ""  
+			transform: translate(-100%,0)
+			transition: transform .2s linear
+
+			
+.explore
+	display: inline-block
+	height: 35px 
+	line-height: 32px 
+	font-size: 14px 
+	color: #abaeb7
+	border: 1px solid #ABAEB7  
+	border-radius: 10px 
+	background: transparent 
+	color: #dfe3ec
+	padding: 0 14px  
+	vertical-align: middle
+
+.logo
+	color: #fff 
+	&__sp
+		border: 2px solid #F2F2F2 
+		display: inline-block
+		vertical-align: middle
+		font-size: 19px 
+		+black
+		color: #2addbd
+		height: 35px  
+		line-height: 35px
+		width: 35px  
+		text-align: center
+	&__text
+		display: inline-block
+		vertical-align: middle
+		font-size: 19px 
+		+bold
+
+.letter
+	display: inline-block
+	min-width: .3em 
+.hero
+	background: #36373f url(../img/hero.jpg) no-repeat 50% 50%
+	background-size: cover 
+	height: 100vh 
+	padding-top: 300px
+	color: #fff  
+	line-height: 1.5
+	text-align: center
+	font-size: 16px  
+	&__title
+		font-size: 80px 
+		color: #2addbc 
+		+black
+		line-height: 1 
+		margin-bottom: 30px 
+	&__action
+		text-align: center
+		margin-top: 120px 
+	&__start
+		border-bottom: 2px solid #2addbc
+		padding: 0 16px 10px 16px
+		text-transform: uppercase
+		color: #fff  
+		text-decoration: none
+
+.loader
+	background: #000
+	position: fixed
+	height: 100%
+	width: 100%
+	z-index: 2000
+	mix-blend-mode: multiply
+	&__inside
+		width: 140vw
+		height: 140vw
+		position: absolute
+		left: 50%
+		top: 50%
+		transform: translate(-50%,-50%) scale(0.01)
+		background: #fff 
+		border-radius: 50%  
+
